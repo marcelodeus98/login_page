@@ -1,20 +1,22 @@
 {
-  "name": "server",
+  "name": "login",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "init-db": "node server/db/init.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nodemon": "^2.0.13",
-    "sqlite": "^4.0.23",
-    "sqlite3": "^5.0.2"
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.7.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }

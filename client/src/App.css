@@ -27,6 +27,12 @@ body{
     box-shadow: 10px 11px black;
 }
 
+.login-form span{
+    display: block;
+    font-family: 'Poppins' , sans-serif;
+    color:#FF4500;
+}    
+
 .login-form-group{
     padding: 2px;
 }
@@ -40,11 +46,6 @@ body{
     
 }
 
-.form-error{
-    display: block;
-    font-family: 'Poppins' , sans-serif;
-    color:#FF4500;
-}
 
 .button{
     width: 80px;
