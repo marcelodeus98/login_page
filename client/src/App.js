@@ -63,13 +63,13 @@ const validateLogin = yup.object().shape({
 
                 <label>Password</label>
                 <div className="login-form-group">
-                  <Input name="password" className="form-field" placeHolder="Enter password"/>
+                  <Input name="password" type="password" className="form-field" placeHolder="Enter password"/>
 
                 </div>
 
                 <label>Confirm Password</label>
                 <div className="login-form-group">
-                  <Input name="confirmPassword" className="form-field" placeHolder="Enter password"/>
+                  <Input name="confirmPassword" type="password" className="form-field" placeHolder="Enter password"/>
                 </div>
                 
                 <button className="button" type="submit">
@@ -88,12 +88,12 @@ const validateLogin = yup.object().shape({
               <Form onSubmit={handleLoginSubmit} class="login-form" schema={validateLogin}>
                 <label>Email</label>
                 <div className="login-form-group">
-                  <Input name="email" className="form-field" placeHolder="email"/>
+                  <Input name="email" className="form-field" placeHolder="Enter your email"/>
                 </div>
 
                 <label>Password</label>
                 <div className="login-form-group">
-                  <Input name="password" className="form-field" placeHolder="password"/>
+                  <Input name="password" type="password" className="form-field" placeHolder="Enter your password"/>
 
                 </div>
                 
