@@ -15,34 +15,33 @@ const validateLogin = yup.object().shape({
   password: yup.string().min(6, "The password is need of six caracteres").required("The password is obligatory"),
 });
 
- function App() {
-  async function handleRegisterSubmit({
-    name,
-    email,
-    password
-  }) {
-    try{
-      const response = await api.post('/register', {name, email,password})
-      console.log(response.data)
-      alert("User registred!")
-    } catch(err){
-       alert("User not register!");
-    };
-  };
-  async function handleLoginSubmit({
-    email,
-    password
-  }) {
+  function App() {
+    async function handleRegisterSubmit({
+      name,
+      email,
+      password
+    }) {
       try{
-        const response = await api.post('/login', {email,password})
+        const response = await api.post('/register', {name, email,password})
         console.log(response.data)
-        alert("User connected")
+        alert("User registred!")
       } catch(err){
-         alert("User not found!");
+          alert("User not register!");
       };
+    };
   
-
-}
+    async function handleLoginSubmit({
+      email, 
+    }) {
+      try{
+        const response = await api.post('/login', {email})
+        console.log(response.data)
+        alert("User connected!")
+      } catch(err){
+          alert("User not found!");
+      };
+    };
+  
 
   return (
     <div className="container">
